@@ -32,6 +32,7 @@ jobs:
 
   lint:
     runs-on: windows-latest
+    continue-on-error: true
 
     steps:
       - name: Checkout code
@@ -40,13 +41,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+        node-version: 20
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run lint (non-blocking)
-        run: npm run lint || echo "Lint finished with warnings/errors but CI continues"
+      - name: Run lint
+        run: npm run lint
 
 
   test:
