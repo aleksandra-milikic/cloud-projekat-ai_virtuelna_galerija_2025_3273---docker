@@ -44,8 +44,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run ESLint
-        run: npm run lint
+      - name: Run lint
+        run: npm run lint   
 
   test:
     runs-on: windows-latest
@@ -55,13 +55,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Check build output
+      - name: Echo success
         run: echo "Build successful"
