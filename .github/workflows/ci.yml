@@ -29,6 +29,13 @@ jobs:
       - name: Build application
         run: npm run build
 
+  info:
+    runs-on: windows-latest
+
+    steps:
+      - name: Display workflow info
+        run: echo "Paralelni job je uspesno pokrenut"
+
   test:
     runs-on: windows-latest
     needs: build
