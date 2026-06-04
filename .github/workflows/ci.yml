@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - name: Display workflow info
-        run: echo "Paralelni job je uspesno pokrenut"
+        run: echo "Paralelni job je uspjesno pokrenut"
 
   test:
     runs-on: windows-latest
